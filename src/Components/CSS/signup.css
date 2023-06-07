@@ -1,0 +1,75 @@
+.SignUp {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #c2d7e8;
+}
+
+.signup-card {
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(140, 140, 140);
+    background-color: #ffffff;
+    height: 40vh;
+    width: 45%;
+}
+
+.signup-animation {
+    display: flex;
+}
+
+.signup-animation .animation {
+    width: 300px;
+}
+
+.straight-line {
+    margin-top: 5%;
+    width: 2px;
+    height: 90%;
+    background-color: black;
+}
+
+.signup-form {
+    width: 50%;
+}
+.signup-form .heading{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 25px;
+}
+.form-child{
+    padding: 5px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 2px;
+}
+.form-child input{
+    font-size: 18px;
+    outline: none;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 2px solid black;
+}
+.submit-btn{
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid #0073ff;
+    color: #0073ff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.submit-btn:hover{
+    background-color: #0073ff;
+    color: #ffffff;
+}
+.already{
+    margin-top: 30px;
+}
+.already .login{
+    color: #0073ff;
+    text-decoration: none;
+}
