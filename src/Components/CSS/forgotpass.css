@@ -1,0 +1,34 @@
+
+.forgot-pass-main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #c2d7e8;
+}
+.forgot-pass-card{
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(140, 140, 140);
+    background-color: #ffffff;
+    height: 30vh;
+    width: 45%;
+}
+.forgot-pass-animation{
+    display: flex;
+}
+.forgot-pass-animation .animation{
+    width: 300px;
+}
+.forgot-pass-form {
+    width: 50%;
+}
+
+.forgot-pass-form .heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 25px;
+}
+.go-to-login{
+    margin-top: 30px;
+}
