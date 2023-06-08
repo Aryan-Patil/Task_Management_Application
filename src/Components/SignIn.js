@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, useNavigate } from "react-router-dom";
 import './CSS/login.css';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../Firebase/Connection';
 
 function SignIn(props) {
     const navigate = useNavigate();
-    let name = "apple";
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const login = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+            .then(async (res) => {
+                props.setX(res.user.uid);
+                navigate("/dashboard");
+            })
+            .catch((err) => {
+                alert(err.message);
+            });
+    }
     return (
         <div className='login-main'>
             <div className="login-card">
@@ -22,12 +36,12 @@ function SignIn(props) {
                     <div className="heading">
                         Login
                     </div>
-                    <form >
+                    <form onSubmit={login} >
                         <div className="form-child">
-                            <input type="email" required placeholder="Email" />
+                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="Email" />
                         </div>
                         <div className="form-child">
-                            <input type="password" required placeholder="Password" />
+                            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Password" />
                         </div>
                         <input className='submit-btn' type="submit" value="Login" />
                     </form>
@@ -42,13 +56,6 @@ function SignIn(props) {
                     </div>
                 </div>
             </div>
-            {/* <button
-                onClick={() => {
-                    props.setX(name);
-                    navigate('/dashboard');
-                }}>
-                Submit
-            </button> */}
         </div>
     )
 }
