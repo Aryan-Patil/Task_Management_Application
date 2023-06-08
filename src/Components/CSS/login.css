@@ -1,0 +1,41 @@
+.login-main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #c2d7e8;
+}
+.login-card{
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(140, 140, 140);
+    background-color: #ffffff;
+    height: 40vh;
+    width: 45%;
+}
+.login-animation{
+    display: flex;
+}
+.login-animation .animation{
+    width: 300px;
+}
+.login-form {
+    width: 50%;
+}
+
+.login-form .heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 25px;
+}
+.forgot-pass{
+    margin-top: 30px;
+}
+.dont {
+    margin-top: 10px;
+}
+
+.color-2 {
+    color: #0073ff;
+    text-decoration: none;
+}
