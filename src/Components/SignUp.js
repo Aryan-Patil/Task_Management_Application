@@ -27,6 +27,9 @@ function SignUp() {
                     name: name,
                     email: email
                 })
+                setEmail('');
+                setName('');
+                setPassword('');
                 navigate('/');
             })
             .catch((err) => {

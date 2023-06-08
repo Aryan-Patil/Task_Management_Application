@@ -14,6 +14,8 @@ function SignIn(props) {
         signInWithEmailAndPassword(auth, email, password)
             .then(async (res) => {
                 props.setX(res.user.uid);
+                setEmail('');
+                setPassword('');
                 navigate("/dashboard");
             })
             .catch((err) => {
